@@ -5,14 +5,13 @@ Created on Fri Jun  2 20:09:33 2023
 @author: riki4
 """
 import PySimpleGUI as sg
-import controller.py as controller
+from Controller import Controller
 class Pesquisa:
-    def __init__(self):
+    def __init__(self, controller):
+        self.controller = controller
         self.layout = [
-            [sg.Text('Digite um termo de pesquisa:')],
-            [sg.Input(key='-PESQUISA-')],
-            [sg.Button('Pesquisar')],
-            [sg.Button('Incluir')]
+            [sg.Text('Título:'), sg.Input(key='-PESQUISA_TITULO-')],
+            [sg.Button('Buscar'), sg.Button('Incluir'), sg.Button('Editar'), sg.Button('Excluir'), sg.Button('Visualizar')]
         ]
 
     def get_layout(self):
