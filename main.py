@@ -31,7 +31,7 @@ class Main:
             elif event == 'Incluir':
                 self.janela['-PESQUISA_TAB-'].select()  
             elif event == 'Cadastrar':
-                nome = values['-TITULO-']
+                titulo = values['-TITULO-']
                 sg.popup(f'Cadastrando: {titulo} ')
 
         self.janela.close()
